@@ -2,30 +2,32 @@ import java.io.IOException;
 
 public class MainClass {
     private static String[] amorgosTwek = new String[21];
+    private static ProcessBuilder processBuilder = new ProcessBuilder("cmd", "/c", "cls").inheritIO();
+
     public static void main(String[] arg) throws Exception{
+        delete();
         initiateSussyTwerk();
         while(true) {
-                int i = 0;
-                for (String s : amorgosTwek) {
-                    delete();
-                    System.out.println((++i)+"\n"+s);
-                    Thread.sleep(5);
-                }
+            int i = 0;
+            for (String s : amorgosTwek) {
+                delete();
+                //processBuilder.start().waitFor();
+                System.out.print(++i+"\n"+s);
+                Thread.sleep(50);
+            }
         }
     }
 
 
     public static void delete() throws Exception{
-        try {
-            if (System.getProperty("os.name").contains("Windows"))
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            else
-                Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {}
-        //System.out.print("\033[H\033[2J");
+        if (System.getProperty("os.name").contains("Windows"))
+            processBuilder.start().waitFor();
+        else
+            Runtime.getRuntime().exec("clear");
+
+        //System.out.print("\f");
         //System.out.flush();
-        //Runtime. getRuntime(). exec("cls");
-        //for(int i =0;i<1000;i++) System.out.print("\b");
+        //for(int i =0;i<2400;i++) System.out.print("\b");
     }
 
 
@@ -370,7 +372,7 @@ public class MainClass {
                 "NNNNmdhyso++++/////+++++++ooooooyNNmNNNNmdhyssssoooooooooooooooooooooooooooosssssssooooooooooooooooo\n" +
                 "so+/////++++++++oooooooooooooooosyhhyyssoooooooooooooooooooooooooooossssssssssssssooooooooooooooo+++\n" +
                 "/+++++++ooooooooooooooooooooo++ooooooooooooooooooooooooooosssssssssssssssssoooooooooooo++++/////::::\n" +
-                "+ooooooooooooooooooo+++////:::/++ooooooooooooooooossssssssssssssssssssssoooooo+++///::::::::::::://+\n";
+                "+ooooooooooooooooooo+++////:::/++ooooooooooooooooossssssssssssssssssssssoooooo+++///::::::::::::://+";
 
         amorgosTwek[7] = "" +
                 "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
@@ -713,7 +715,7 @@ public class MainClass {
                 "NNNNmdhyso++++/////++++++oooooooyNMNNNNNmdhysssssssooooooooooooooooooooooooosssssssooooooooooooooooo\n" +
                 "so+/////++++++++oooooooooooooooosyhhysssooooooooooooooooooooooooooosssssssssssssssooooooooooooooo+++\n" +
                 "/+++++++ooooooooooooooooooooo++oooooooooooooooooooooooooossssssssssssssssssoooooooooooo++++/////::::\n" +
-                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+\n";
+                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+";
 
         amorgosTwek[14] = "" +
                 "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
@@ -762,7 +764,7 @@ public class MainClass {
                 "NNNNmdhyso++++/////+++++++oshdmNNmdysoo++//////////////+oosyhddmNNNmmdhysssoossssssooooooooooooooooo\n" +
                 "so+/////++++++++oooooooooooooossyhdmmmmmNNNNNNNNNNNNNNNNmmmddhhyysssssssssssssssssooooooooooooooo+++\n" +
                 "/+++++++ooooooooooooooooooooo++oooooooooooosossssssssoooossssssssssssssssssoooooooooooo++++/////::::\n" +
-                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::://+\n";
+                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::://+";
 
         amorgosTwek[15] = "" +
                 "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
@@ -909,7 +911,7 @@ public class MainClass {
                 "NNNNmdhyso++++/////++++++ooooooosmNNNNNmdhyyssssooooooooooooooooooooooooooooossssssooooooooooooooooo\n" +
                 "so+/////++++++++ooooooooooooooossyyyyssoooooooooooooooooooooooooooosssssssssssssssooooooooooooooo+++\n" +
                 "/+++++++ooooooooooooooooooooo++ooooooooooooooooooooooooooosssssssssssssssssoooooooooooo++++/////::::\n" +
-                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+\n";
+                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+";
 
         amorgosTwek[18] = "" +
                 "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
@@ -958,7 +960,7 @@ public class MainClass {
                 "NNNNmdhyso++++/////++++++ooshdmNNmdhsoo++//////////////+oosyhdmmNNNNmdhysssoossssssooooooooooooooooo\n" +
                 "so+/////++++++++oooooooooooooossyhddmmmNNNNNNNNNNNNNNNNNNmmddhhyysssssssssssssssssooooooooooooooo+++\n" +
                 "/+++++++ooooooooooooooooooooo++oooooooooooooossssssssoooossssssssssssssssssoooooooooooo++++/////::::\n" +
-                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+\n";
+                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+";
 
         amorgosTwek[19] = "" +
                 "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
@@ -1007,55 +1009,55 @@ public class MainClass {
                 "NNNNmdhyso++++/////++++++oooooooyNMNNNNmddhyssssooooooooooooooooooooooooooooossssssooooooooooooooooo\n" +
                 "so+/////++++++++ooooooooooooooossyhyysssooooooooooooooooooooooooooosssssssssssssssooooooooooooooo+++\n" +
                 "/+++++++ooooooooooooooooooooo++ooooooooooooooooooooooooooosssssssssssssssssoooooooooooo++++/////::::\n" +
-                "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+\n";
-
-        amorgosTwek[20] = "" +
-                "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "sssssssssssssssssssssssssssyyyyyyyyyssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "ssssssssssssssssssssyhddmNNNmmmmmmNNNmdhyyyyyyssssssssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "ssssssssssssssssyhdNNmhyo/:------:/smMMNNmmmmmmmddysssssssssssssssssssssssssssssssssssssssssssssssss\n" +
-                "sssssssssssssyhmNmho:-.......-/sdmdhyo+:------:/sdmNNNNmmmmdhhhyssssssssssssssssssssssssssssssssssss\n" +
-                "sssssssssssymNmy/-........-+hmdy+:-...............-/sdmho//osyhmmNmdhyysssssssssssssssssssssssssssss\n" +
-                "sssssssssydNmo-.........-smms/-.......................:ohho:....-/+shdmmmhyyssssssssssssssssssssssss\n" +
-                "ssssssssymNy-...........:NN/-oy:........................./ymh/........:/shmNmdysssssssssssssssssssss\n" +
-                "ssssssssmMy..............sNh-/hm+.........................-oNm:...........-/shmmdhssssssssssssssssss\n" +
-                "ssssssshMm-...............sNh:-yms-...................-/ohmmh+................:+hmNdysssssssssssssss\n" +
-                "sssssssmMy.................sNd/-+hd+.............-:+ydmdhs/-.....................-+hNNdyssssssssssss\n" +
-                "sssssssmMs..................+dms::ody/.......-:oydmds+/-............................:smNdyssssssssss\n" +
-                "sssssssdMdsyyys/-............-ymdo-:+o:..-:oyddhs+:-..................................-omNdyssssssss\n" +
-                "sssssydNmhyooyhNh-............./ymdysssyhddhs/-.........................................-smNdyssssss\n" +
-                "sssydNh+-...-/yNy-...............:+syyys+:-...............................................:yNmhsssss\n" +
-                "ssymN+.`.--:smh+-...........................................................................+mNdssss\n" +
-                "ssyNm/--:+ydy+-..............................................................................:dMdyyy\n" +
-                "ssshmmdmmmNm/-................................................................................-hNNNN\n" +
-                "ssssssyysshNmo:-...........//..................................................................:dMNm\n" +
-                "ssssssssssshmNh/---......-ss.................................................................---/mMN\n" +
-                "ssssssssssssydNms:----../hh-................................................................-----+NN\n" +
-                "ssssssssssssssymNdo:---oNd/...............................................................--------dM\n" +
-                "sssssssssssssssshmNh+:sNd/...............................................................---------sM\n" +
-                "sssssssssssssssssyhmNdNd/-.............................................................-----------+M\n" +
-                "sssssssssssssssssssymMm+----.........................................................-------------+N\n" +
-                "sssssssssssssssssssyNNs-------....................................................----------------sM\n" +
-                "ssssssssssyyyhddmmmNMh:----------..............................................------------------:dM\n" +
-                "yyyyhddmmNNNNNNNmmmNNo---------------......................................---------------------:yMM\n" +
-                "NNNNNNNmmmmmmmmmmmmMN/---------------------..........................---------------------------sNNN\n" +
-                "NmmmmmmmmmmmmmmmmmNMm/------------------------------------------------------------------------:sNms+\n" +
-                "mmmmmmmmmmNNNNNNMNMMm/-----------------------------------------------------------------------/hNd+++\n" +
-                "mNNNNMMMMNNNmmddddmMm:---------------------------------------------------------------------:smNho++o\n" +
-                "NNNmmmddddhhhhhhhdmMm/-------------------------------------------------------------------:odNmysssoo\n" +
-                "hhhhddhyso+:-.```-sNNs-----------------------------------------------------------------:odNmhysssooo\n" +
-                "hhdms-````````````+mNm+-------------------------------------------------------------:/ymNmhsssoo+///\n" +
-                "hhdm+``````.-:/+syddmMm+--------------------------------------------------------::+ydNmhsooooo++////\n" +
-                "hhhdmhsssyhdddddhhhddNMNy/--------------------------------------------------:/+sdNNmhsoooooo++/++++/\n" +
-                "hhhhhhhhhhdddmmNNNNNNNmdNmy+:------------------------------------------:/+shmNNmhysoooooo+++/+++++++\n" +
-                "hhddmmmNNNMNNmdhyso+////+ymNmho+::----------------------------::::/osydmNNmdhssooooooooo+ooooooooooo\n" +
-                "NNNNmdhyso++++/////++++++++sydmNNmhysoo+///////////////+ossyhhdmNNNmmdhysssosssssssooooooooooooooooo\n" +
-                "so+/////++++++++ooooooooooooooosyhdmmmmNNNNNNNNNNNNNNNNNmmdddhhyyyssssssssssssssssooooooooooooooo+++\n" +
-                "/+++++++ooooooooooooooooooooo+oooooooooooooooooooooooooosssssssssssssssssssoooooooooooo++++/////::::\n" +
                 "ooooooooooooooooooo++++////:::/ooooooooooooooooosssssssssssssssssssssssoooooo+++////::::::::::::///+";
+
+        amorgosTwek[20] =  "" +
+                "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssyhhdddmmmmmmmmddhhyyssssssssssssssssssssssss\n" +
+                "ssssssssssssssssssssssssssssssssssssssssssssssssssyyhmmNNdhyssooo++oosyyhmNNNmdhysssssssssssssssssss\n" +
+                "sssssssssssssssssssssssssssssssssssyhhhhhhhhhhhdmNNmhs+:-.................--/oydNNmdysssssssssssssss\n" +
+                "sssssssssssssssssssssyhmmNNNNNmmmmNmdhysssymMNNds+:.............................-/sdNNdhssssssssssss\n" +
+                "sssssssssssssssssydNNmhs///odNNdy+:-...-+ymdy/-.....................................-+hNNdysssssssss\n" +
+                "sssssssssssssyhmNNho:-.-+hmds/-......:ymds/............................................:smNdysssssss\n" +
+                "ssssssssssshmNmy+-...-ymms/-......./hmy/-................................................-omNmysssss\n" +
+                "ssssssssshmNd+-.....-dNs--ohhs/:-/hms:.....................................................-omNdssss\n" +
+                "ssssssshNNh/.........yNs:---/+ohmmy:.........................................................:hNmyss\n" +
+                "sssssymNh/...........-smmyso++smh:.............................................................oNNhs\n" +
+                "sssshNN+...............-/oyhhhh+..........................................----------------......+NNh\n" +
+                "sssyNN+...............................................................------------------------...+NN\n" +
+                "ssshMd-...........................................................--------------------------------yM\n" +
+                "ssshMd-........................................................-----------------------------------:d\n" +
+                "sssyMN:......................................................--------------------------------------+\n" +
+                "ssshNMdyyyys/..............................................-----------------------------------------\n" +
+                "hdmmdhysoosNN+...........................................------------------------------------------:\n" +
+                "my+:...--+hNh-.........................................---------------------------------------------\n" +
+                "+..-:/oydmh+-..........---..........................------------------------------------------------\n" +
+                "mddmmmNNNs-.........------........................--------------------------------------------------\n" +
+                "yhhhyysymmo---------------......................----------------------------------------------------\n" +
+                "ssssssssymNh+-------------...................-------------------------------------------------------\n" +
+                "ssssssssssdNNs:-----------.................---------------------------------------------------------\n" +
+                "sssssssssssydNd+------------.............-----------------------------------------------------------\n" +
+                "ssssssssssssshNNy:------------......---------------------------------------------------------------/\n" +
+                "ssssssssssssssymNd+-------------------------------------------------------------------------------:h\n" +
+                "sssssssssssssssshNms:-----------------------------------------------------------------------------yN\n" +
+                "sssssssssssssssssymNd+--------------------------------------------------------------------------:yNd\n" +
+                "ssssssssssssssssssshNNs:-----------------------------------------------------------------------:yNh-\n" +
+                "ssssssssssssssssssyyhNNh:---------------------------------------------------------------------/hNh-`\n" +
+                "ssssssssssyyyhddmmmNNNNMd+------------------------------------------------------------------:+dNmsos\n" +
+                "yyyyhddmmNNNNNNNmmmmmmmNNmo:-------------------------------------------------:://:---------:yNNmdddd\n" +
+                "NNNNNNNmmmmmmmmmmmmmmmmmNMNs:-------------------------------------------:/+oyhdhs:-------:omMMNNNNNN\n" +
+                "NmmmmmmmmmmmmmmmmmNNNNNNMMMNy:------------------------------------::/+shdmmdyo/:--------+dNmddysso++\n" +
+                "mmmmmmmmmmNNNNNMMMNNNmmddddNNs------------------------------:::/oshmNNNNMd/-----------/hNmy+//////++\n" +
+                "mNNNNMMMMNNNmmddddhhhhhhhhhdNm+---------------------::://osyhmNNNNMNNNNNMh---------:/yNNy++++++++++o\n" +
+                "NNNmmmddddhhhhhhhdddhhhhhhhhmNd/-----------------+syhmmNNMMMMMNNmmdhysodMy-------:+hNNdyssssssssssoo\n" +
+                "hhhhddhyso+:-.```-smdhhhhhhhdNMy----------------oNMMMMNNmmdhyso+///////hMs::/+oyhdNNdyssyyyysssssooo\n" +
+                "hhdms-````````````+mdhhhhhhhhdNm+--------------:mMhyso+///////+++ooosssdMmmNNmmddhyysssssssssso++///\n" +
+                "hhdm+``````.-:/+syddhhhhhhhhddNMh:-------------yMd+//++++ooossssssssyssyhhhyyssssssssooooooooo++////\n" +
+                "hhhdmhsssyhdddddhhhhddmmNNNNNNmNNs------------+NNsoossssssssssyysysssssssssooooooooooooooooo++/++++/\n" +
+                "hhhhhhhhhhdddmmNNNNNNNmdhyso+//sNm/-------::/odNmsssssssssssssssssssooooooooooooooooooooo+++/+++++++\n" +
+                "hhddmmmNNNMNNmdhyso+///////////+dMy::/+sydmmmmdhsssssssssooooooooooooooooooooooooooooooo+ooooooooooo\n" +
+                "NNNNmdhyso++++/////+++++++ooooooyNNmNNNNmdhyssssoooooooooooooooooooooooooooosssssssooooooooooooooooo\n" +
+                "so+/////++++++++oooooooooooooooosyhhyyssoooooooooooooooooooooooooooossssssssssssssooooooooooooooo+++\n" +
+                "/+++++++ooooooooooooooooooooo++ooooooooooooooooooooooooooosssssssssssssssssoooooooooooo++++/////::::\n" +
+                "+ooooooooooooooooooo+++////:::/++ooooooooooooooooossssssssssssssssssssssoooooo+++///::::::::::::://+";
     }
 }
